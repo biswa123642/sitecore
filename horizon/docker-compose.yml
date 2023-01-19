@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  cm:
+    image: ${REGISTRY}sitecore-horizon-integration-${TOPOLOGY}-cm:${VERSION:-latest}
+    build:
+      context: ./cm
+      args:
+        BASE_IMAGE: ${CM_BASE_IMAGE}
+        HORIZON_INTEGRATION_ASSET_IMAGE : ${HORIZON_INTEGRATION_ASSET_IMAGE}
+  mssql-init:
+    image: ${REGISTRY}sitecore-horizon-integration-${TOPOLOGY}-mssql-init:${VERSION:-latest}
+    build:
+      context: ./mssql-init
+      args:
+        BASE_IMAGE: ${MSSQL_INIT_IMAGE}
+        HORIZON_INTEGRATION_ASSET_IMAGE : ${HORIZON_INTEGRATION_ASSET_IMAGE}
