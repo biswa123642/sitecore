@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: solr-init
 spec:
+  activeDeadlineSeconds: 900
   template:
     spec:
       nodeSelector:
