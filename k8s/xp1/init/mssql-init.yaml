@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: mssql-init
 spec:
+  activeDeadlineSeconds: 900
   template:
     spec:
       nodeSelector:
