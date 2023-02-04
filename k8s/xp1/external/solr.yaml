@@ -13,6 +13,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: solr
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "1"
   labels:
     app: solr
 spec:
