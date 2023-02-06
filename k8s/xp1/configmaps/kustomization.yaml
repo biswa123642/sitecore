@@ -26,3 +26,10 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.id-hostname
+- name: cd-hostname
+  objref:
+    kind: ConfigMap
+    name: sitecore-hostnames
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.cd-hostname
